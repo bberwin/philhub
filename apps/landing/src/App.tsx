@@ -1,5 +1,20 @@
 import { Button } from '@repo/ui/Button'
-import { Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
+import { Facebook, Instagram, Youtube } from 'lucide-react'
+
+// Minimal X (formerly Twitter) icon
+const XIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={width as number}
+    height={height as number}
+    fill="currentColor"
+    aria-hidden="true"
+    {...props}
+  >
+    <path d="M18.244 2h3.314L14.01 10.6 22 22h-6.587l-4.73-6.338L4.9 22H1.586l7.961-9.57L2 2h6.66l4.442 5.923L18.244 2zm-1.16 18.356h1.835L7.986 3.59H6.047l11.037 16.766z" />
+  </svg>
+)
 
 function App() {
   const handleDonate = () => {
@@ -41,8 +56,8 @@ function App() {
               <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Facebook">
                 <Facebook size={24} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Twitter">
-                <Twitter size={24} />
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="X">
+                <XIcon width={24} height={24} />
               </a>
               <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Instagram">
                 <Instagram size={24} />
@@ -112,9 +127,9 @@ function App() {
             <a 
               href="#" 
               className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
-              aria-label="Twitter"
+              aria-label="X"
             >
-              <Twitter size={28} />
+              <XIcon width={28} height={28} />
             </a>
             <a 
               href="#" 
