@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden"
+      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden lg:overflow-y-hidden"
     >
       {/* Mobile: bring back original image layout */}
       <div 
@@ -58,37 +58,37 @@ function App() {
         </div>
       </div>
 
-      {/* Desktop: Two-column layout: Images left, Content right */}
-      <div className="hidden lg:grid min-h-screen lg:grid-cols-5">
+      {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
+      <div className="hidden lg:grid lg:h-screen lg:grid-cols-2">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center p-8 lg:col-span-2 h-full">
+        <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
-            className="max-w-full max-h-[90vh] object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-center justify-center lg:justify-start lg:col-span-3">
-          <div className="w-full max-w-none p-8 lg:px-8 lg:py-16">
+        <div className="flex items-center justify-center lg:justify-start">
+          <div className="w-full max-w-none p-0">
           
           {/* Main Title - Classical Serif Font */}
-          <div className="mb-8">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-4">
+          <div className="mb-6 px-0">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-3">
               <span className="block text-black">FREE</span>
               <span className="block text-black">PHILOSOPHY</span>
               <span className="block text-amber-700">HUB</span>
             </h1>
             
             {/* Subtitle - Clean Sans-serif */}
-            <p className="font-sans text-lg md:text-xl lg:text-2xl font-semibold tracking-normal sm:tracking-[0.15em] lg:tracking-[0.3em] text-stone-700 mt-8">
+            <p className="font-sans text-lg md:text-xl lg:text-2xl font-semibold tracking-normal sm:tracking-[0.15em] lg:tracking-[0.2em] text-stone-700 mt-6">
               COMING SOON
             </p>
           </div>
 
           {/* Donation Section */}
-          <div className="space-y-6 mb-12">
+          <div className="space-y-5 mb-10 px-0">
             <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
@@ -102,7 +102,7 @@ function App() {
           </div>
 
           {/* Social Media Icons */}
-          <div className="flex space-x-6 mb-8">
+          <div className="flex space-x-6 mb-6 px-0">
             <a 
               href="#" 
               className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
@@ -139,7 +139,7 @@ function App() {
           </p>
         </div>
       </div>
-    </div>
+      </div>
     </div>
   )
 }
