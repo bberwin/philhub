@@ -7,23 +7,29 @@ function App() {
   }
 
   return (
-    <div 
-      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 bg-cover bg-center bg-no-repeat relative"
-      style={{
-        backgroundImage: 'url(/IMG_5104.PNG)',
-        backgroundPosition: 'left center',
-        backgroundSize: 'contain'
-      }}
+    <div
+      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100"
     >
-      {/* Right side content area */}
-      <div className="min-h-screen flex items-center justify-end">
-        <div className="w-full max-w-2xl p-8 lg:p-16">
+      {/* Two-column layout: Images left (desktop), Content right */}
+      <div className="min-h-screen grid lg:grid-cols-2">
+        {/* Left: philosophy image(s) - hidden on mobile */}
+        <div className="hidden lg:flex items-center justify-center p-8">
+          <img
+            src="/IMG_5104.PNG"
+            alt="Philosophy collage"
+            className="w-full h-auto object-contain"
+          />
+        </div>
+
+        {/* Right: text and donation */}
+        <div className="flex items-center justify-center lg:justify-start">
+          <div className="w-full max-w-2xl p-8 lg:p-16">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-8">
-            <h1 className="font-serif text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4 text-stone-800">
-              <span className="block">FREE</span>
-              <span className="block">PHILOSOPHY</span>
+            <h1 className="font-serif text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4">
+              <span className="block text-black">FREE</span>
+              <span className="block text-black">PHILOSOPHY</span>
               <span className="block text-amber-700">HUB</span>
             </h1>
             
@@ -81,52 +87,6 @@ function App() {
 
           {/* Copyright */}
           <p className="font-sans text-sm text-stone-600">
-            © 2025 Free Philosophy Hub
-          </p>
-        </div>
-      </div>
-
-      {/* Mobile responsive overlay for smaller screens */}
-      <div className="lg:hidden absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-6">
-        <div className="text-center text-white max-w-md">
-          <h1 className="font-serif text-5xl font-bold leading-tight mb-4">
-            <span className="block">FREE</span>
-            <span className="block">PHILOSOPHY</span>
-            <span className="block text-amber-300">HUB</span>
-          </h1>
-          
-          <p className="font-sans text-lg font-semibold tracking-[0.2em] text-gray-300 mb-8">
-            COMING SOON
-          </p>
-
-          <div className="space-y-4 mb-8">
-            <p className="font-sans text-base text-gray-300">
-              Donate to support the launch
-            </p>
-            <Button 
-              onClick={handleDonate}
-              className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
-            >
-              Donate
-            </Button>
-          </div>
-
-          <div className="flex justify-center space-x-6 mb-6">
-            <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
-              <Facebook size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
-              <Twitter size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
-              <Instagram size={24} />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors">
-              <Youtube size={24} />
-            </a>
-          </div>
-
-          <p className="font-sans text-xs text-gray-500">
             © 2025 Free Philosophy Hub
           </p>
         </div>
