@@ -59,30 +59,30 @@ function App() {
       </div>
 
       {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
-      <div className="hidden lg:grid lg:grid-cols-2 items-center lg:min-h-[85vh]">
+      <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center">
         {/* Left: philosophy image(s) - hidden on mobile */}
         <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
-            className="w-full h-full object-contain"
+            className="w-full h-full object-cover"
           />
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-center justify-center lg:justify-start">
-          <div className="w-full max-w-[48ch] p-0">
+        <div className="flex items-stretch justify-center">
+          <div className="w-full max-w-none h-full p-0 flex flex-col justify-center">
           
           {/* Main Title - Classical Serif Font */}
-          <div className="mb-4">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-2">
+          <div className="mb-2">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-2">
               <span className="block text-black">FREE</span>
               <span className="block text-black">PHILOSOPHY</span>
               <span className="block text-amber-700">HUB</span>
             </h1>
             
             {/* Subtitle - Clean Sans-serif */}
-            <p className="font-sans text-lg md:text-xl lg:text-2xl font-semibold tracking-normal sm:tracking-[0.15em] lg:tracking-[0.2em] text-stone-700 mt-4">
+            <p className="font-sans text-xl lg:text-2xl font-semibold tracking-normal sm:tracking-[0.15em] lg:tracking-[0.2em] text-stone-700 mt-2">
               COMING SOON
             </p>
           </div>
