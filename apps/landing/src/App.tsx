@@ -61,12 +61,14 @@ function App() {
               <p className="font-sans text-base text-gray-300">
                 Donate to support the launch
               </p>
-              <Button 
-                onClick={handleDonate}
-                className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
-              >
-                Donate
-              </Button>
+              <div className="flex justify-center">
+                <Button 
+                  onClick={handleDonate}
+                  className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
+                >
+                  Donate
+                </Button>
+              </div>
             </div>
             <div className="flex justify-center space-x-6 mb-6">
               <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Facebook">
@@ -123,12 +125,14 @@ function App() {
             <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
-            <Button 
-              onClick={handleDonate}
-              className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
-            >
-              Donate
-            </Button>
+            <div className="flex justify-center">
+              <Button 
+                onClick={handleDonate}
+                className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
+              >
+                Donate
+              </Button>
+            </div>
           </div>
 
           {/* Social Media Icons */}
