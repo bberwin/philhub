@@ -10,10 +10,58 @@ function App() {
     <div
       className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden"
     >
-      {/* Two-column layout: Images left (desktop), Content right */}
-      <div className="min-h-screen grid lg:grid-cols-5">
+      {/* Mobile: bring back original image layout */}
+      <div 
+        className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative"
+        style={{ backgroundImage: 'url(/IMG_5104.PNG)' }}
+      >
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
+          <div className="text-center text-white max-w-md">
+            <h1 className="font-serif text-5xl font-bold leading-tight mb-4">
+              <span className="block">FREE</span>
+              <span className="block">PHILOSOPHY</span>
+              <span className="block text-amber-300">HUB</span>
+            </h1>
+            <p className="font-sans text-lg font-semibold tracking-[0.2em] text-gray-300 mb-8">
+              COMING SOON
+            </p>
+            <div className="space-y-4 mb-8">
+              <p className="font-sans text-base text-gray-300">
+                Donate to support the launch
+              </p>
+              <Button 
+                onClick={handleDonate}
+                className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
+              >
+                Donate
+              </Button>
+            </div>
+            <div className="flex justify-center space-x-6 mb-6">
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Facebook">
+                <Facebook size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Twitter">
+                <Twitter size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Instagram">
+                <Instagram size={24} />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="YouTube">
+                <Youtube size={24} />
+              </a>
+            </div>
+            <p className="font-sans text-xs text-gray-500">
+              © 2025 Free Philosophy Hub
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: Two-column layout: Images left, Content right */}
+      <div className="hidden lg:grid min-h-screen lg:grid-cols-5">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center p-8 lg:col-span-3 h-full">
+        <div className="hidden lg:flex items-center justify-center p-8 lg:col-span-2 h-full">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
@@ -22,12 +70,12 @@ function App() {
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-center justify-center lg:justify-start lg:col-span-2">
-          <div className="w-full max-w-2xl p-8 lg:p-16">
+        <div className="flex items-center justify-center lg:justify-start lg:col-span-3">
+          <div className="w-full max-w-none p-8 lg:px-8 lg:py-16">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-8">
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight mb-4">
               <span className="block text-black">FREE</span>
               <span className="block text-black">PHILOSOPHY</span>
               <span className="block text-amber-700">HUB</span>
@@ -91,7 +139,6 @@ function App() {
           </p>
         </div>
       </div>
-    </div>
     </div>
   )
 }
