@@ -1,5 +1,6 @@
 import { Button } from '@repo/ui/Button'
-import { Facebook, Instagram, Youtube } from 'lucide-react'
+import { Facebook, Instagram } from 'lucide-react'
+import React from 'react'
 
 // Minimal X (formerly Twitter) icon
 const XIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGElement>) => (
@@ -13,6 +14,21 @@ const XIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGEleme
     {...props}
   >
     <path d="M18.244 2h3.314L14.01 10.6 22 22h-6.587l-4.73-6.338L4.9 22H1.586l7.961-9.57L2 2h6.66l4.442 5.923L18.244 2zm-1.16 18.356h1.835L7.986 3.59H6.047l11.037 16.766z" />
+  </svg>
+)
+
+// Custom YouTube icon that matches other social icons
+const YouTubeIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width={width as number}
+    height={height as number}
+    fill="currentColor"
+    aria-hidden="true"
+    {...props}
+  >
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
   </svg>
 )
 
@@ -63,7 +79,7 @@ function App() {
                 <Instagram size={24} />
               </a>
               <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="YouTube">
-                <Youtube size={24} />
+                <YouTubeIcon width={24} height={24} />
               </a>
             </div>
             <p className="font-sans text-xs text-gray-500">
@@ -143,7 +159,7 @@ function App() {
               className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
               aria-label="YouTube"
             >
-              <Youtube size={28} />
+              <YouTubeIcon width={28} height={28} />
             </a>
           </div>
 
