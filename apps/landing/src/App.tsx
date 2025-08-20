@@ -59,9 +59,9 @@ function App() {
       </div>
 
       {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
-      <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center">
+      <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center gap-0">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-end p-0 h-full overflow-hidden pr-4">
+        <div className="hidden lg:flex items-center justify-start p-0 h-full overflow-hidden">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
@@ -70,8 +70,8 @@ function App() {
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-stretch justify-center">
-          <div className="w-full max-w-none h-full p-0 flex flex-col justify-center">
+        <div className="flex items-stretch justify-start">
+          <div className="w-full max-w-none h-full p-0 flex flex-col justify-center items-start">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-2">
@@ -88,17 +88,18 @@ function App() {
           </div>
 
           {/* Donation Section */}
-          <div className="space-y-4 mb-6">
+          <div className="space-y-4 mb-6 w-full">
             <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
-            
-            <Button 
-              onClick={handleDonate}
-              className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
-            >
-              Donate
-            </Button>
+            <div className="w-full flex lg:justify-center">
+              <Button 
+                onClick={handleDonate}
+                className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
+              >
+                Donate
+              </Button>
+            </div>
           </div>
 
           {/* Social Media Icons */}
