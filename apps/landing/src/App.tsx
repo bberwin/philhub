@@ -92,14 +92,12 @@ function App() {
             <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
-            <div className="w-full flex lg:justify-center">
-              <Button 
-                onClick={handleDonate}
-                className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
-              >
-                Donate
-              </Button>
-            </div>
+            <Button 
+              onClick={handleDonate}
+              className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
+            >
+              Donate
+            </Button>
           </div>
 
           {/* Social Media Icons */}
