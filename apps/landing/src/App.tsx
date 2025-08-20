@@ -61,11 +61,11 @@ function App() {
       {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
+        <div className="hidden lg:flex items-center justify-end p-0 h-full overflow-hidden pr-4">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain object-left"
           />
         </div>
 
