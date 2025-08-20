@@ -8,40 +8,40 @@ function App() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100"
+      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden"
     >
       {/* Two-column layout: Images left (desktop), Content right */}
-      <div className="min-h-screen grid lg:grid-cols-2">
+      <div className="min-h-screen grid lg:grid-cols-5">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-center p-8">
+        <div className="hidden lg:flex items-center justify-center p-8 lg:col-span-3 h-full">
           <img
             src="/IMG_5104.PNG"
             alt="Philosophy collage"
-            className="w-full h-auto object-contain"
+            className="max-w-full max-h-[90vh] object-contain"
           />
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-center justify-center lg:justify-start">
+        <div className="flex items-center justify-center lg:justify-start lg:col-span-2">
           <div className="w-full max-w-2xl p-8 lg:p-16">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-8">
-            <h1 className="font-serif text-7xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4">
+            <h1 className="font-serif text-5xl md:text-6xl lg:text-8xl xl:text-9xl font-bold leading-tight mb-4">
               <span className="block text-black">FREE</span>
               <span className="block text-black">PHILOSOPHY</span>
               <span className="block text-amber-700">HUB</span>
             </h1>
             
             {/* Subtitle - Clean Sans-serif */}
-            <p className="font-sans text-xl lg:text-2xl font-semibold tracking-[0.3em] text-stone-700 mt-8">
+            <p className="font-sans text-lg md:text-xl lg:text-2xl font-semibold tracking-normal sm:tracking-[0.15em] lg:tracking-[0.3em] text-stone-700 mt-8">
               COMING SOON
             </p>
           </div>
 
           {/* Donation Section */}
           <div className="space-y-6 mb-12">
-            <p className="font-sans text-lg lg:text-xl text-stone-700 font-medium">
+            <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
             
@@ -86,7 +86,7 @@ function App() {
           </div>
 
           {/* Copyright */}
-          <p className="font-sans text-sm text-stone-600">
+          <p className="font-sans text-xs sm:text-sm text-stone-600">
             © 2025 Free Philosophy Hub
           </p>
         </div>
