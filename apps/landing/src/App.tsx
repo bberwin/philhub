@@ -14,7 +14,7 @@ function App() {
       {/* Mobile: bring back original image layout */}
       <div 
         className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: 'url(/philosophy-illustration.svg)' }}
+        style={{ backgroundImage: 'url(/philosophy-illustration.png)' }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
@@ -61,7 +61,7 @@ function App() {
         {/* Left: philosophy image(s) - hidden on mobile */}
         <div className="hidden lg:flex items-center justify-start p-0 h-full overflow-hidden">
           <img
-            src="/philosophy-illustration.svg"
+            src="/philosophy-illustration.png"
             alt="Philosophical illustration with books, quill, candle, and classical elements"
             className="w-full h-full object-contain object-left"
           />
