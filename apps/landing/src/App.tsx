@@ -8,8 +8,13 @@ function App() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-amber-50 via-amber-25 to-stone-50 overflow-x-hidden lg:overflow-y-hidden"
-      style={{ backgroundColor: '#f7f3e9' }}
+      className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
+      style={{ 
+        backgroundImage: 'url(/philosophy-illustration.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
       {/* Mobile: bring back original image layout */}
       <div 
@@ -59,17 +64,18 @@ function App() {
       {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
       <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center gap-0">
         {/* Left: philosophy image(s) - hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-start p-0 h-full overflow-hidden">
+        <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
           <img
             src="/philosophy-illustration.png"
             alt="Philosophical illustration with books, quill, candle, and classical elements"
-            className="w-full h-full object-contain object-left"
+            className="w-full h-full object-contain object-center"
           />
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-stretch justify-start">
-          <div className="w-full max-w-none h-full p-0 flex flex-col justify-center items-start">
+        <div className="flex items-stretch justify-start relative">
+          <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+          <div className="relative z-10 w-full max-w-none h-full p-0 flex flex-col justify-center items-start">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-2">
