@@ -1,8 +1,9 @@
 {
   "buildCommand": "turbo run build --filter=landing",
-  "outputDirectory": "apps/landing/dist",
+  "outputDirectory": "dist",
   "installCommand": "bun install",
   "framework": "vite",
+  "rootDirectory": "apps/landing",
   "rewrites": [
     {
       "source": "/(.*)",
