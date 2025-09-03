@@ -9,12 +9,7 @@ function App() {
   return (
     <div
       className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
-      style={{ 
-        backgroundImage: 'url(/philosophy-illustration.png)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
+      style={{ backgroundColor: '#f7f3e9' }}
     >
       {/* Mobile: bring back original image layout */}
       <div 
@@ -73,9 +68,8 @@ function App() {
         </div>
 
         {/* Right: text and donation */}
-        <div className="flex items-stretch justify-start relative">
-          <div className="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
-          <div className="relative z-10 w-full max-w-none h-full p-0 flex flex-col justify-center items-start">
+        <div className="flex items-stretch justify-start">
+          <div className="w-full max-w-none h-full p-0 flex flex-col justify-center items-start">
           
           {/* Main Title - Classical Serif Font */}
           <div className="mb-2">
