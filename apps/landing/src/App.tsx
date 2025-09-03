@@ -9,7 +9,12 @@ function App() {
   return (
     <div
       className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
-      style={{ backgroundColor: '#f7f3e9' }}
+      style={{ 
+        backgroundColor: '#f7f3e9',
+        backgroundImage: 'url(/parchment-strip.svg)',
+        backgroundSize: '800px 100px',
+        backgroundRepeat: 'repeat-y'
+      }}
     >
       {/* Mobile: bring back original image layout */}
       <div 
