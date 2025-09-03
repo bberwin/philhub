@@ -1,0 +1,5 @@
+[33mc92671d[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Social: add custom YouTube icon to match other social icons; replace lucide-react Youtube
+[33m8dffbc5[m Social: replace Twitter bird with X icon on mobile and desktop
+[33ma7547a5[m Deploy: restore desktop Donate button to original position; keep mobile unchanged
+[33m19e282e[m Update
+[33m67f9d0b[m Deploy: desktop image visibility and right-side spacing adjustments
