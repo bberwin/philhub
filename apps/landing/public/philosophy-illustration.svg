@@ -1,8 +1,32 @@
 <svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="800" height="600" fill="#f7f3e9"/>
   <!-- Placeholder for philosophical illustration -->
-  <text x="400" y="300" font-family="serif" font-size="24" fill="#8b7359" text-anchor="middle">Philosophy Illustration</text>
-  <text x="400" y="330" font-family="serif" font-size="16" fill="#8b7359" text-anchor="middle">Replace with actual image</text>
+  <rect x="50" y="200" width="200" height="250" fill="#d4c4a8" stroke="#8b7359" stroke-width="2"/>
+  <rect x="60" y="210" width="180" height="230" fill="#e8dcc0" stroke="#8b7359" stroke-width="1"/>
+  <rect x="70" y="220" width="160" height="210" fill="#f0e6d2" stroke="#8b7359" stroke-width="1"/>
+  
+  <!-- Quill pen -->
+  <line x1="150" y1="180" x2="250" y2="280" stroke="#8b7359" stroke-width="3"/>
+  <polygon points="250,280 245,275 255,275" fill="#8b7359"/>
+  
+  <!-- Candle -->
+  <rect x="300" y="300" width="20" height="100" fill="#f5f5f5" stroke="#8b7359" stroke-width="1"/>
+  <ellipse cx="310" cy="300" rx="15" ry="8" fill="#ffd700"/>
+  
+  <!-- Scroll -->
+  <rect x="100" y="350" width="120" height="80" fill="#f7f3e9" stroke="#8b7359" stroke-width="2"/>
+  <line x1="110" y1="370" x2="210" y2="370" stroke="#8b7359" stroke-width="1"/>
+  <line x1="110" y1="380" x2="210" y2="380" stroke="#8b7359" stroke-width="1"/>
+  <line x1="110" y1="390" x2="180" y2="390" stroke="#8b7359" stroke-width="1"/>
+  
+  <!-- Column -->
+  <rect x="500" y="100" width="30" height="200" fill="#e8dcc0" stroke="#8b7359" stroke-width="2"/>
+  <ellipse cx="515" cy="100" rx="20" ry="10" fill="#d4c4a8" stroke="#8b7359" stroke-width="2"/>
+  
+  <!-- Owl -->
+  <circle cx="600" cy="150" r="25" fill="#8b7359"/>
+  <circle cx="595" cy="145" r="3" fill="#f7f3e9"/>
+  <circle cx="605" cy="145" r="3" fill="#f7f3e9"/>
+  
+  <text x="400" y="550" font-family="serif" font-size="16" fill="#8b7359" text-anchor="middle">Replace with your philosophical illustration</text>
 </svg>
-
-
