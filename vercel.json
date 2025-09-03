@@ -1,13 +1,18 @@
 {
-  "buildCommand": "bun run build",
-  "outputDirectory": "dist",
-  "installCommand": "bun install",
-  "framework": "vite",
-  "rootDirectory": "apps/landing",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "apps/landing/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/landing/dist/$1"
     }
   ]
 }
