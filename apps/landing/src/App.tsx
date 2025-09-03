@@ -11,14 +11,24 @@ function App() {
       className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
       style={{ 
         backgroundColor: '#f7f3e9',
-        backgroundImage: 'url(/parchment-texture.svg)',
-        backgroundSize: '100px 100px',
-        backgroundRepeat: 'repeat'
+        backgroundImage: 'url(/philosophy-illustration.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        filter: 'blur(20px) brightness(1.1) saturate(0.3)',
+        position: 'relative'
       }}
     >
+      <div 
+        className="absolute inset-0"
+        style={{ 
+          backgroundColor: '#f7f3e9',
+          opacity: 0.7
+        }}
+      ></div>
       {/* Mobile: bring back original image layout */}
       <div 
-        className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative"
+        className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative z-10"
         style={{ backgroundImage: 'url(/philosophy-illustration.png)' }}
       >
         <div className="absolute inset-0 bg-black/60" />
@@ -62,7 +72,7 @@ function App() {
       </div>
 
       {/* Desktop: Two-column layout: Images left, Content right (50/50) */}
-      <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center gap-0">
+      <div className="hidden lg:grid lg:grid-cols-2 lg:h-screen items-center gap-0 relative z-10">
         {/* Left: philosophy image(s) - hidden on mobile */}
         <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
           <img
