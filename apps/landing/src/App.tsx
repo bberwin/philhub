@@ -41,7 +41,7 @@ function App() {
                   href="https://www.facebook.com/people/Free-Philosophy-Hub/61578821438882/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center w-12 h-12 bg-amber-600 hover:bg-amber-700 border border-amber-600 rounded-lg text-white hover:text-white transition-all duration-200 shadow-md hover:shadow-lg" 
+                  className="inline-flex items-center justify-center w-12 h-12 bg-white/20 hover:bg-white/30 border border-white/30 rounded-lg text-white hover:text-white transition-all duration-200 shadow-md hover:shadow-lg" 
                   aria-label="Facebook"
                 >
                   <Facebook size={24} />
