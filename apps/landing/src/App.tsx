@@ -1,6 +1,5 @@
 import { Button } from '@repo/ui/Button'
 import { Facebook } from 'lucide-react'
-import React from 'react'
 
 function App() {
   const handleDonate = () => {
