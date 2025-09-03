@@ -8,18 +8,12 @@ function App() {
 
   return (
     <div
-      className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
-      style={{ 
-        backgroundColor: '#f7f3e9',
-        backgroundImage: 'url(/parchment-strip.svg)',
-        backgroundSize: '800px 100px',
-        backgroundRepeat: 'repeat-y'
-      }}
+      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden lg:overflow-y-hidden"
     >
       {/* Mobile: bring back original image layout */}
       <div 
         className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: 'url(/philosophy-illustration.png)' }}
+        style={{ backgroundImage: 'url(/IMG_5104.PNG)' }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
@@ -66,7 +60,7 @@ function App() {
         {/* Left: philosophy image(s) - hidden on mobile */}
         <div className="hidden lg:flex items-center justify-center p-0 h-full overflow-hidden">
           <img
-            src="/philosophy-illustration.png"
+            src="/IMG_5104.PNG"
             alt="Philosophical illustration with books, quill, candle, and classical elements"
             className="w-full h-full object-contain object-center"
           />
