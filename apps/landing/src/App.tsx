@@ -1,36 +1,6 @@
 import { Button } from '@repo/ui/Button'
-import { Facebook, Instagram } from 'lucide-react'
+import { Facebook } from 'lucide-react'
 import React from 'react'
-
-// Minimal X (formerly Twitter) icon
-const XIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width={width as number}
-    height={height as number}
-    fill="currentColor"
-    aria-hidden="true"
-    {...props}
-  >
-    <path d="M18.244 2h3.314L14.01 10.6 22 22h-6.587l-4.73-6.338L4.9 22H1.586l7.961-9.57L2 2h6.66l4.442 5.923L18.244 2zm-1.16 18.356h1.835L7.986 3.59H6.047l11.037 16.766z" />
-  </svg>
-)
-
-// Custom YouTube icon that matches other social icons
-const YouTubeIcon = ({ width = 24, height = 24, ...props }: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    width={width as number}
-    height={height as number}
-    fill="currentColor"
-    aria-hidden="true"
-    {...props}
-  >
-    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-  </svg>
-)
 
 function App() {
   const handleDonate = () => {
@@ -39,12 +9,13 @@ function App() {
 
   return (
     <div
-      className="min-h-screen bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 overflow-x-hidden lg:overflow-y-hidden"
+      className="min-h-screen bg-gradient-to-br from-amber-50 via-amber-25 to-stone-50 overflow-x-hidden lg:overflow-y-hidden"
+      style={{ backgroundColor: '#f7f3e9' }}
     >
       {/* Mobile: bring back original image layout */}
       <div 
         className="lg:hidden min-h-screen bg-cover bg-center bg-no-repeat relative"
-        style={{ backgroundImage: 'url(/IMG_5104.PNG)' }}
+        style={{ backgroundImage: 'url(/philosophy-illustration.svg)' }}
       >
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 min-h-screen flex items-center justify-center p-6">
@@ -61,26 +32,23 @@ function App() {
               <p className="font-sans text-base text-gray-300">
                 Donate to support the launch
               </p>
-              <Button 
-                onClick={handleDonate}
-                className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
-              >
-                Donate
-              </Button>
-            </div>
-            <div className="flex justify-center space-x-6 mb-6">
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Facebook">
-                <Facebook size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="X">
-                <XIcon width={24} height={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="Instagram">
-                <Instagram size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-amber-300 transition-colors" aria-label="YouTube">
-                <YouTubeIcon width={24} height={24} />
-              </a>
+              <div className="flex items-center justify-center space-x-4">
+                <Button 
+                  onClick={handleDonate}
+                  className="bg-amber-600 hover:bg-amber-700 text-white font-sans font-semibold px-6 py-3 rounded-lg"
+                >
+                  Donate
+                </Button>
+                <a 
+                  href="https://www.facebook.com/people/Free-Philosophy-Hub/61578821438882/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-12 h-12 bg-amber-600 hover:bg-amber-700 border border-amber-600 rounded-lg text-white hover:text-white transition-all duration-200 shadow-md hover:shadow-lg" 
+                  aria-label="Facebook"
+                >
+                  <Facebook size={24} />
+                </a>
+              </div>
             </div>
             <p className="font-sans text-xs text-gray-500">
               © 2025 Free Philosophy Hub
@@ -94,8 +62,8 @@ function App() {
         {/* Left: philosophy image(s) - hidden on mobile */}
         <div className="hidden lg:flex items-center justify-start p-0 h-full overflow-hidden">
           <img
-            src="/IMG_5104.PNG"
-            alt="Philosophy collage"
+            src="/philosophy-illustration.svg"
+            alt="Philosophical illustration with books, quill, candle, and classical elements"
             className="w-full h-full object-contain object-left"
           />
         </div>
@@ -123,44 +91,23 @@ function App() {
             <p className="font-sans text-base md:text-lg lg:text-xl text-stone-700 font-medium">
               Donate to support the launch
             </p>
-            <Button 
-              onClick={handleDonate}
-              className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
-            >
-              Donate
-            </Button>
-          </div>
-
-          {/* Social Media Icons */}
-          <div className="flex space-x-6 mb-4">
-            <a 
-              href="#" 
-              className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
-              aria-label="Facebook"
-            >
-              <Facebook size={28} />
-            </a>
-            <a 
-              href="#" 
-              className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
-              aria-label="X"
-            >
-              <XIcon width={28} height={28} />
-            </a>
-            <a 
-              href="#" 
-              className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
-              aria-label="Instagram"
-            >
-              <Instagram size={28} />
-            </a>
-            <a 
-              href="#" 
-              className="text-stone-600 hover:text-amber-700 transition-colors duration-200"
-              aria-label="YouTube"
-            >
-              <YouTubeIcon width={28} height={28} />
-            </a>
+            <div className="flex items-center space-x-4">
+              <Button 
+                onClick={handleDonate}
+                className="bg-amber-700 hover:bg-amber-800 text-white font-sans font-semibold px-8 py-4 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 border-none"
+              >
+                Donate
+              </Button>
+              <a 
+                href="https://www.facebook.com/people/Free-Philosophy-Hub/61578821438882/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-14 h-14 bg-amber-50 border border-stone-200 rounded-xl text-stone-600 hover:text-amber-700 hover:bg-stone-100 hover:border-stone-300 transition-all duration-200 shadow-md hover:shadow-lg" 
+                aria-label="Facebook"
+              >
+                <Facebook size={28} />
+              </a>
+            </div>
           </div>
 
           {/* Copyright */}
