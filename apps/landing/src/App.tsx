@@ -9,7 +9,10 @@ function App() {
   return (
     <div
       className="min-h-screen overflow-x-hidden lg:overflow-y-hidden"
-      style={{ backgroundColor: '#f7f3e9' }}
+      style={{ 
+        backgroundColor: '#f5f1e8',
+        backgroundImage: 'linear-gradient(135deg, #f7f3e9 0%, #f0e6d2 50%, #e8dcc0 100%)'
+      }}
     >
       {/* Mobile: bring back original image layout */}
       <div 
